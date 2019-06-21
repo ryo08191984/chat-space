@@ -8,6 +8,7 @@
 ## Association
 has_many :group, through:members
 has_many :members
+has_many:message, through: :members
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -17,6 +18,7 @@ has_many :members
 ## Association
 has_many :user, through:members
 has_many :members
+has_many:message, through: :members
 
 ## membersテーブル
 |Column|Type|Options|
