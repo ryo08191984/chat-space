@@ -1,24 +1,24 @@
 # README
 
-## userテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false,add_index|
-|email|integer|null: false,add_index|
-|password|integer|null: false|
+|name|string|null: false,add_index|
 
 ## Association
 has_many :group, through:members
 has_many :members
+has_many:messages
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 
 ## Association
 has_many :user, through:members
 has_many :members
+has_many:messages
 
 ## membersテーブル
 |Column|Type|Options|
@@ -30,7 +30,7 @@ has_many :members
 - belongs_to :group
 - belongs_to :user
 
-## messegeテーブル
+## messegesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
